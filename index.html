@@ -1,21 +1,95 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="style.css">
-<title>Useless game</title>
-</head>
-<body>
-    <h1 id="get">ColorChange</h1>
-    <button onClick="colorchange('Red')">Red</button>
-    <button onClick="colorchange('green')">Green</button>
-    <button onClick="colorchange('gray')">Gray</button>
-    <button onClick="colorchange('yellow')">Yellow</button>
-    <button onClick="colorchange('blue')">Blue</button>
-    <button onClick="colorchange('purple')">Purple</button>
-    <button onClick="colorchange('black')">Black</button>
-    <button onClick="colorchange('orange')">Orange</button>
-<canvas id="canvas" width="500" height="500" onClick="clicker()" ></canvas>
-<script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add React in One Minute</title>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+
+    <h2>Add React in One Minute</h2>
+    <p>This page demonstrates using React with no build tooling.</p>
+    <p>React is loaded as a script tag.</p>
+
+    <!-- We will put our React component inside this div. -->
+    <div id="like_button_container"></div>
+    <div id="clicker"></div>
+    <div id="lulz"></div>
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script type="text/babel">
+     const aly = document.getElementById('clicker');
+     const betaa = document.getElementById('lulz');
+
+
+
+     const api_key = "2220ac1353a35858a101f297b4972952";
+     class First extends React.Component {
+        FirstApi = async (e) => {
+          e.preventDefault();
+          const api_url = await fetch (`https://api-tigris.tfl.gov.uk/AccidentStats/2018?app_id=82d89041&app_key=2220ac1353a35858a101f297b4972952`);
+          const data = await api_url.json ();
+          console.log(data);
+     
+        }
+        render(){
+          return(
+             <form weatherMethod = {this.FirstApi} />
+          )
+        }
+      }
+      
+     class Form1 extends React.Component {
+        render(){
+          return (
+            <form onSubmit={this.props.weatherMethod}>
+             <input type="text" name="city" placeholder="kek" />
+             <button>Получить погоду</button>
+            </form>
+          );
+        }
+      }
+     class Click extends React.Component{
+       constructor(props){
+         super(props);
+         this.state = {checked : true};
+       }
+       apply(asd){
+         asd = prompt('Privet')
+       }
+       cancel(){
+         alert('Отменено')
+       }
+       hundleC1heck = () => {
+         this.setState({checked : !this.state.checked});
+       }
+      
+       render()
+       {
+         var message;
+         if (this.state.checked){
+           message = 'choosed';
+         } else {
+           message = 'unchoosed';
+         }
+         return (
+         <div className="lol">
+           <button onClick={this.apply}>Отправить</button>
+           <button onClick={this.cancel}>Отменить</button>
+           <input type="checkbox" onChange={this.hundleC1heck} defaultChecked={this.state.checked} />
+           <p>Checkbox : {message}</p>
+          </div> );
+       }
+     }
+     
+
+     ReactDOM.render (<Form1/>, betaa);
+     ReactDOM.render( <Click/>, aly);
+
+    </script>
+    <script src="like_button.js"></script>
+
+  </body>
 </html>
