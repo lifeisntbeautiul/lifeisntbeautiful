@@ -51,38 +51,7 @@
           );
         }
       }
-     class Click extends React.Component{
-       constructor(props){
-         super(props);
-         this.state = {checked : true};
-       }
-       apply(asd){
-         asd = prompt('Privet')
-       }
-       cancel(){
-         alert('Отменено')
-       }
-       hundleC1heck = () => {
-         this.setState({checked : !this.state.checked});
-       }
-      
-       render()
-       {
-         var message;
-         if (this.state.checked){
-           message = 'choosed';
-         } else {
-           message = 'unchoosed';
-         }
-         return (
-         <div className="lol">
-           <button onClick={this.apply}>Отправить</button>
-           <button onClick={this.cancel}>Отменить</button>
-           <input type="checkbox" onChange={this.hundleC1heck} defaultChecked={this.state.checked} />
-           <p>Checkbox : {message}</p>
-          </div> );
-       }
-     }
+    
      
 
      ReactDOM.render (<Form1/>, betaa);
