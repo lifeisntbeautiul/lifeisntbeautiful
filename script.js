@@ -1,15 +1,26 @@
+'use strict';
 
-var beg = document.getElementById("canvas");
-var ctx = beg.getContext ("2d");
-var click = 0;
-function clicker (){
-    click++;
-    ctx.clearRect(0,0,beg.width, beg.height);
-    ctx.fillText("Count of clickers   " + click + " " , 100, 100);
-    ctx.font="30px Verdana";
-    console.log(click);
+const e = React.createElement;
+
+class LikeButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { liked: false };
+  }
+
+  render() {
+    if (this.state.liked) {
+      return 'You liked this.';
+    }
+
+    return e(
+      'button',
+      { onClick: () => this.setState({ liked: true }) },
+      'Like'
+    );
+  }
 }
-function colorchange(color){
-    var v = document.getElementById('get');
-    v.style.color = color;
-}
+
+const domContainer = document.querySelector('#like_button_container');
+ReactDOM.render(e(LikeButton), domContainer);
+
