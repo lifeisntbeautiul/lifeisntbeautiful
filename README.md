@@ -1,2 +1,2 @@
 # lifeisntbeautiful
-za loo pa
+:)
