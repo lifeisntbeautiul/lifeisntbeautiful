@@ -1,0 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size:20px;
+  color: #2f75d1;
+}
+button {
+
+  padding: 8px 20px;
+  margin: 0 0px;
+  border-radius: 2px;
+  width:100%;
+  cursor: pointer;
+  background-color: #d1971a;
+  color: #fff;
+  outline: none!important;
+  border-radius: 95px 95px 95px 95px;
+-moz-border-radius: 95px 95px 95px 95px;
+-webkit-border-radius: 95px 95px 95px 95px;
+ border: 2px solid #7a717a;
+}
+button:hover {
+  background-color: #dbd8d2;
+  transition: 0.3;
+}
+
+.main {
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url("images/london2.jpg") center center no-repeat;
+  background-size: cover;
+}
+.child{
+  background: rgba(241,173,101,1);
+  background: -moz-linear-gradient(left, rgba(241,173,101,1) 0%, rgba(254,105,67,1) 77%, rgba(254,105,67,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(241,173,101,1)), color-stop(77%, rgba(254,105,67,1)), color-stop(100%, rgba(254,105,67,1)));
+  background: -webkit-linear-gradient(left, rgba(241,173,101,1) 0%, rgba(254,105,67,1) 77%, rgba(254,105,67,1) 100%);
+  background: -o-linear-gradient(left, rgba(241,173,101,1) 0%, rgba(254,105,67,1) 77%, rgba(254,105,67,1) 100%);
+  background: -ms-linear-gradient(left, rgba(241,173,101,1) 0%, rgba(254,105,67,1) 77%, rgba(254,105,67,1) 100%);
+  background: linear-gradient(to right, rgba(241,173,101,1) 0%, rgba(254,105,67,1) 77%, rgba(254,105,67,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1ad65', endColorstr='#fe6943', GradientType=1 ); 
+  -webkit-box-shadow: -8px 57px 172px 101px rgba(156,130,156,0.99);
+  -moz-box-shadow: -8px 57px 172px 101px rgba(156,130,156,0.99);
+  box-shadow: -8px 57px 172px 101px rgba(156,130,156,0.99);
+  border-radius: 95px 95px 95px 95px;
+  -moz-border-radius: 95px 95px 95px 95px;
+  -webkit-border-radius: 95px 95px 95px 95px;
+  border: 2px solid #7a717a;
+  width:29%;
+  height:800px;
+  flex: 1;
+  flex-direction:row;
+
+}
+
+input[type="text"] {
+  background-color: transparent;
+  border: 0;
+  border-bottom: solid 2px #113a65;
+  width: 96%;
+  padding-bottom: 4px;
+  color: #fff;
+  background-color:#d1971a;
+  font-weight: lighter;
+  font-size: 20px;
+  outline: none;
+  border-radius: 95px 95px 95px 95px;
+-moz-border-radius: 95px 95px 95px 95px;
+-webkit-border-radius: 95px 95px 95px 95px;
+border: 2px solid #7a717a;
+padding-left: 10px;
+}
+p{
+  color: #c01a8e;
+  font-size: 16px;
+}
